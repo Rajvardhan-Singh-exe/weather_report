@@ -68,7 +68,6 @@ target_col = 'Temperature (C)'# we wish to rpedict temprature
 X_raw = df[feature_cols].values#Filters the Pandas DataFrame to keep only the 6 chosen feature columns in an array columns.
 y = df[[target_col]].values  # Double brackets [[ ]] keep shape as (m, 1) and turning it into a numpy matrix
 
-#Shape Alignment: Matching $y$'s shape (m, 1) with y_pred's shape (m, 1) guarantees that matrix operations (error = y_pred - y) subtract row-by-row cleanly without reshaping.
 #single bracket returns an array of each feature coln
 #df[[target_col]]: The inner double brackets [[ ]] select the target column while telling Pandas to keep it as a 2D DataFrame rather than flattening it into a 1D Series.
 #.values: Converts the Pandas DataFrame into a raw NumPy array.
